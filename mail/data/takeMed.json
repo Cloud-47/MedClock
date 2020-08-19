@@ -1,0 +1,73 @@
+{
+    "takeMed" :{
+        "error": {
+            "morning":  {
+                "sec": "00",
+                "min": "00",
+                "hour": "10",
+                "day": "10",
+                "month": "08",
+                "year": "2020"
+            },
+            "noon": {
+                "sec": null,
+                "min": null,
+                "hour": null,
+                "day": null,
+                "month": null,
+                "year": null
+            },
+            "afterNoon": {
+                "sec": null,
+                "min": null,
+                "hour": null,
+                "day": null,
+                "month": null,
+                "year": null
+            },
+            "evning": {
+                "sec": "00",
+                "min": "20",
+                "hour": "22",
+                "day": "10",
+                "month": "08",
+                "year": "2020"
+            }
+        },
+
+        "OK": {
+            "morning":  {
+                "sec": "00",
+                "min": "00",
+                "hour": "09",
+                "day": "10",
+                "month": "08",
+                "year": "2020"
+            },
+            "noon": {
+                "sec": null,
+                "min": null,
+                "hour": null,
+                "day": null,
+                "month": null,
+                "year": null
+            },
+            "afterNoon": {
+                "sec": null,
+                "min": null,
+                "hour": null,
+                "day": null,
+                "month": null,
+                "year": null
+            },
+            "evning": {
+                "sec": "00",
+                "min": "30",
+                "hour": "22",
+                "day": "10",
+                "month": "08",
+                "year": "2020"
+            }
+        }
+    }    
+ }

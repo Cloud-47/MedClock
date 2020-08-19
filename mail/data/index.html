@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">  <title>Gestion de prise de médicaments</title>  <!-- Custom fonts for this theme -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="css/all.min.css" rel="stylesheet" type="text/css">
+  <!-- Theme CSS -->
+  <link href="css/freelancer.css" rel="stylesheet">
+</head>
+<body id="page-top">  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Gestion de prise de médicaments</a>
+      <span class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </span>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="divider-custom divider-light">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+    </div>
+    <div class="divider-custom-line"></div>
+  </div> 
+  <p class="masthead-subheading font-weight-light mb-0"></p>
+  <section class="page-section ">
+    <div class="container">
+      <div id="alertsuccess" class="alert alert-success alert-dismissible" role="alert">
+        <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+        <p id="alert-flash"></p>
+      </div>
+      <div class="row col-lg-11 col-lg-offset-1">
+        <h3>Horaires de prise de medicament enregistrer</h3>
+          <div class="table-responsive col-md-6">
+            <table class="table">
+              <tbody id="horraire">
+                <tr>
+                  <th>Temps</th>
+                  <th>Heure</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>   
+      <p class="barre"></p>
+
+      <div class="row col-lg-11 col-lg-offset-1">
+        <div>
+          <h3>Changer les horaires de prise de medicament</h3>
+          <p>Sélectionner les horaires de vos medicaments </p>
+          <form id="calculForm" method="post" action="formulaire.php">
+            <div class="row row_border">
+              <div class="col-md-6 c1 text-center"><p>Matin (de 8:00 à 11:00) </p></div>
+              <div class="col-md-6 c2">
+                <div class="dropdown">
+                  <input type="time" id="matin" name="matin">
+              	</div>
+              </div>
+            </div>
+            <div class="row row_border">
+              <div class="col-md-6 c3 text-center"><p>Midi (de 12:00 à 15:00) </p></div>
+              <div class="col-md-6 c4">
+                <div class="dropdown">
+                  <input type="time" id="midi" name="midi">
+              	</div>
+              </div>
+            </div>
+            <div class="row row_border">
+              <div class="col-md-6 c1 text-center"><p>Après midi (de 16:00 à 19:00)  </p></div>
+              <div class="col-md-6 c2">
+                <div class="dropdown">
+                  <input type="time" id="apres_midi" name="apres_midi">
+                </div>
+              </div>
+            </div>
+            <div class="row row_border">
+              <div class="col-md-6 c1 text-center"><p>Soir (de 20:00 à 23:00)  </p></div>
+              <div class="col-md-6 c2">
+                <div class="dropdown">
+                  <input type="time" id="soir" name="soir">
+                </div>
+              </div>
+            </div>
+            <div id="error"><p class="text-warning"></p></div>
+            <div class="row offset-md-6 form-group">
+              <button type="submit" class="btn btn-primary btn-xl" id="calculerButton">Sauvegarder</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <p class="barre"></p>
+      <div class="row col-lg-11 col-lg-offset-1">
+        <h3>Historique</h3>
+          <div class="row table-responsive">
+            <table class="table table-bordered">
+              <tbody id="historique">
+              <tr>
+              <th>Message</td>
+              <th>Date</td>
+              </tr>
+              
+              </tbody>
+            </table>
+            <!-- <table class="table table-bordered">
+              <tbody>
+              <tr>
+              <td style="width: 50%;" colspan="2"><h6>Prise de medicament</h6></td>
+              <td style="width: 50%;" colspan="2"><h6>Rappel/Alarme</h6></td>
+              </tr>
+              <tr>
+              <td >Message</td>
+              <td >Date</td>
+              <td >Message</td>
+              <td >Date</td>
+              </tr>
+              <tr>
+              <td>Prise OK</td>
+              <td>02-02-2020 11:00:00</td>
+              <td>Vous devez prendre le medicament X</td>
+              <td>02-02-2020 11:00:00</td>
+              </tr>
+              </tbody>
+            </table> -->
+          </div>
+        
+      </div>
+    </div>
+  </section>  <!-- Copyright Section -->
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Copyright  by <a href="https://www.linkedin.com/in/aissat-adlen-aaa93a149/" target="_blank">AISSAT adlen</a></small>
+    </div>
+  </section>  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/form.js"></script>
+</body>
+</html>
